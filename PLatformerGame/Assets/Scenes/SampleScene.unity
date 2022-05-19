@@ -1405,7 +1405,7 @@ GameObject:
   - component: {fileID: 2130121916}
   - component: {fileID: 2130121915}
   - component: {fileID: 2130121920}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1556,8 +1556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ff67ebf9be4ea4fa57aca45f611bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walking_speed: 0.002
-  running_speed: 0.005
+  walking_speed: 0.005
+  running_speed: 0.01
   Jump_force: 3
   Player: {fileID: 2130121917}
   isGrounded: 0
@@ -1565,3 +1565,18 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2130121920}
+        m_TargetAssemblyTypeName: CharacterControll, Assembly-CSharp
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

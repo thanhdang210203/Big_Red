@@ -14,7 +14,8 @@ public class CharacterControll : MonoBehaviour
     [SerializeField] private Transform groundCheckCollider;
     private const float groundCheckRadious = 0.2f;
     [SerializeField] private LayerMask groundLayer;
-    Animator Character_anim;
+
+    private Animator Character_anim;
     private bool Falling_Down = false;
 
     // Start is called before the first frame update
@@ -25,28 +26,13 @@ public class CharacterControll : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Flip()
-    {
-        Debug.Log("Flipppppp");
-
-        //set the facingRight variable to the opposite of what it was
-        facingRight = !facingRight;
-
-        //store the scale of the player in a variable
-        Vector2 playerScale = this.transform.localScale;
-
-        //reverse the direction of the player
-        playerScale.x = playerScale.x * -1;
-
-        //set the player's scale to the new value
-        this.transform.localScale = playerScale;
-    }
 
     private void Update()
     {
         GroundCheck();
         Movement();
         Jump();
+        Attack();
     }
 
     private void GroundCheck()
@@ -58,21 +44,17 @@ public class CharacterControll : MonoBehaviour
         //if yes (isGrounded = true) else (isGrounded = false)
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckCollider.position, groundCheckRadious, groundLayer);
-        if (colliders.Length > 0 && colliders.Length < 2)
+        if (colliders.Length > 0 && colliders.Length < 1.1f)
         {
             isGrounded = true;
             Debug.Log("is grounded");
-            
-            
         }
-
-        else if (colliders.Length > 0.2)
+        else if (colliders.Length > 1.5f)
         {
             Falling_Down = true;
             Character_anim.SetTrigger("isFalling");
         }
-
-        else if (colliders.Length > 0.1 && colliders.Length < 0.15)
+        else if (colliders.Length > 1.1f && colliders.Length < 1.3f)
         {
             Falling_Down = true;
             Character_anim.SetTrigger("isLanding");
@@ -105,7 +87,7 @@ public class CharacterControll : MonoBehaviour
             playerPos.x = playerPos.x - running_speed;
             this.transform.position = playerPos;
 
-            Character_anim.SetTrigger("Running");
+            Character_anim.SetTrigger("isRunning");
 
             if (facingRight == true)
             {
@@ -138,6 +120,11 @@ public class CharacterControll : MonoBehaviour
                 Flip();
             }
         }
+
+        else
+        {
+            Character_anim.SetTrigger("Idle");
+        }
     }
 
     private void Jump()
@@ -148,13 +135,44 @@ public class CharacterControll : MonoBehaviour
             Character_anim.SetTrigger("isJumping");
             Debug.Log("Jumppppp");
         }
+        //else
+        //{
+        //    Character_anim.SetTrigger("Idle");
+        //}
     }
 
-    void Attack()
+    private void Attack()
     {
         if (Input.GetMouseButtonDown(0))
         {
             Character_anim.SetTrigger("Slice");
+            Debug.Log("Slicing");
         }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            Character_anim.SetTrigger("Bow");
+            Debug.Log("Slg");
+        }
+        else
+        {
+            Character_anim.SetTrigger("Idle");
+        }
+    }
+
+    private void Flip()
+    {
+        Debug.Log("Flipppppp");
+
+        //set the facingRight variable to the opposite of what it was
+        facingRight = !facingRight;
+
+        //store the scale of the player in a variable
+        Vector2 playerScale = this.transform.localScale;
+
+        //reverse the direction of the player
+        playerScale.x = playerScale.x * -1;
+
+        //set the player's scale to the new value
+        this.transform.localScale = playerScale;
     }
 }
