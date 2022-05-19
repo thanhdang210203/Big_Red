@@ -58,21 +58,24 @@ public class CharacterControll : MonoBehaviour
         //if yes (isGrounded = true) else (isGrounded = false)
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckCollider.position, groundCheckRadious, groundLayer);
-        if (colliders.Length > 0)
+        if (colliders.Length > 0 && colliders.Length < 2)
         {
             isGrounded = true;
             Debug.Log("is grounded");
+            
+            
         }
 
-        //else if(colliders.Length > 1)
-        //{
-                
-        //}
-
-        else
+        else if (colliders.Length > 0.2)
         {
             Falling_Down = true;
-            Character_anim.SetTrigger("Fall");
+            Character_anim.SetTrigger("isFalling");
+        }
+
+        else if (colliders.Length > 0.1 && colliders.Length < 0.15)
+        {
+            Falling_Down = true;
+            Character_anim.SetTrigger("isLanding");
         }
     }
 
@@ -88,7 +91,8 @@ public class CharacterControll : MonoBehaviour
             playerPos.x = playerPos.x + running_speed; //move playerPos a small amount to the right
             this.transform.position = playerPos; //update the player's position to the new value
 
-            Character_anim.SetTrigger("Run");
+            Character_anim.SetTrigger("isRunning");
+            Debug.Log("Running animation");
 
             if (facingRight == false)
             {
@@ -101,7 +105,7 @@ public class CharacterControll : MonoBehaviour
             playerPos.x = playerPos.x - running_speed;
             this.transform.position = playerPos;
 
-            Character_anim.SetTrigger("Run");
+            Character_anim.SetTrigger("Running");
 
             if (facingRight == true)
             {
@@ -114,7 +118,7 @@ public class CharacterControll : MonoBehaviour
             playerPos.x = playerPos.x - walking_speed;
             this.transform.position = playerPos;
 
-            Character_anim.SetTrigger("Walk");
+            Character_anim.SetTrigger("isWalking");
 
             if (facingRight == true)
             {
@@ -127,7 +131,7 @@ public class CharacterControll : MonoBehaviour
             playerPos.x = playerPos.x + walking_speed;
             this.transform.position = playerPos;
 
-            Character_anim.SetTrigger("Walk"); //set the trigger in the animation controller
+            Character_anim.SetTrigger("isWalking"); //set the trigger in the animation controller
 
             if (facingRight == false)
             {
@@ -141,8 +145,16 @@ public class CharacterControll : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             Player.velocity = Vector2.up * Jump_force;
-            Character_anim.SetTrigger("Jump");
+            Character_anim.SetTrigger("isJumping");
             Debug.Log("Jumppppp");
+        }
+    }
+
+    void Attack()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Character_anim.SetTrigger("Slice");
         }
     }
 }
