@@ -22,20 +22,14 @@ public class PlayerMovement : MonoBehaviour
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-		if (Input.GetButtonDown("Jump"))
+		if (Input.GetButtonDown("Jump") && )
 		{
 			jump = true;
 			animator.SetBool("IsJumping", true);
+			animator.SetBool("IsGrounded", true);
 		}
 
-		if (Input.GetButtonDown("Crouch"))
-		{
-			crouch = true;
-		}
-		else if (Input.GetButtonUp("Crouch"))
-		{
-			crouch = false;
-		}
+		
 
 	}
 
