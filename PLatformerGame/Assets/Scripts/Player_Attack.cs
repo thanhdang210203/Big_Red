@@ -44,17 +44,17 @@ public class Player_Attack : MonoBehaviour
         }
     }
 
-    //void Attack()
-    //{
-    //    animator.SetTrigger("Slice 1");
+    void Attack()
+    {
+        animator.SetTrigger("Slice 1");
 
-    //    Collider2D[] hitEnemise = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemise = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-    //    foreach(Collider2D enemy in hitEnemise)
-    //    {
-    //        Debug.Log("We hit " + enemy.name);
-    //    }
-    //}
+        foreach (Collider2D enemy in hitEnemise)
+        {
+            Debug.Log("We hit " + enemy.name);
+        }
+    }
 
     private void OnDrawGizmosSelected()
     {

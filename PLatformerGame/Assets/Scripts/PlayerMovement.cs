@@ -22,11 +22,11 @@ public class PlayerMovement : MonoBehaviour
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-		if (Input.GetButtonDown("Jump") && )
+		if (Input.GetButtonDown("Jump"))
 		{
 			jump = true;
 			animator.SetBool("IsJumping", true);
-			animator.SetBool("IsGrounded", true);
+			animator.SetBool("IsGrounded", false);
 		}
 
 		
@@ -36,12 +36,10 @@ public class PlayerMovement : MonoBehaviour
 	public void OnLanding()
 	{
 		animator.SetBool("IsJumping", false);
+		animator.SetBool("IsGrounded", true);
 	}
 
-	public void OnCrouching(bool isCrouching)
-	{
-		animator.SetBool("IsCrouching", isCrouching);
-	}
+	
 
 	void FixedUpdate()
 	{
