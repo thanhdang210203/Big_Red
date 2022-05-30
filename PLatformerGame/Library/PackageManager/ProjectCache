@@ -5,192 +5,21 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637884079956021160
-    m_Hash: 2785330331
+      ticks: 637895073074083731
+    m_Hash: 1708296883
   m_LockFileStatus:
     m_FilePath: G:/Github/Platfomer_Game/PLatformerGame/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637884079956131262
-    m_Hash: 3947494059
+      ticks: 637895073074243875
+    m_Hash: 3432548994
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
-    - packageId: com.unity.2d.animation@5.0.7
-      testable: 0
-      isDirectDependency: 1
-      version: 5.0.7
-      source: 1
-      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.2d.animation@5.0.7
-      assetPath: Packages/com.unity.2d.animation
-      name: com.unity.2d.animation
-      displayName: 2D Animation
-      author:
-        name: 
-        email: 
-        url: 
-      category: 2D
-      type: 
-      description: 2D Animation provides all the necessary tooling and runtime components
-        for skeletal animation using Sprites.
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 1.0.15-preview.1
-        - 1.0.15-preview.2
-        - 1.0.15-preview.3
-        - 1.0.15-preview.4
-        - 1.0.15-preview.5
-        - 1.0.16-preview
-        - 1.0.16-preview.1
-        - 1.0.16-preview.2
-        - 2.0.0-preview.1
-        - 2.0.0-preview.2
-        - 2.0.0-preview.3
-        - 2.1.0-preview.1
-        - 2.1.0-preview.2
-        - 2.1.0-preview.4
-        - 2.1.0-preview.5
-        - 2.1.0-preview.7
-        - 2.2.0-preview.1
-        - 2.2.0-preview.4
-        - 2.2.0-preview.5
-        - 2.2.1-preview.1
-        - 2.2.1-preview.2
-        - 3.0.2
-        - 3.0.3
-        - 3.0.4
-        - 3.0.5
-        - 3.0.6
-        - 3.0.8
-        - 3.1.0
-        - 3.1.1
-        - 3.2.1
-        - 3.2.2
-        - 3.2.3
-        - 3.2.4
-        - 3.2.5
-        - 3.2.6
-        - 3.2.9
-        - 3.2.10
-        - 3.2.11
-        - 3.2.13
-        - 3.2.14
-        - 3.2.15
-        - 3.2.16
-        - 3.2.17
-        - 3.2.18
-        - 4.0.0
-        - 4.0.1
-        - 4.1.0
-        - 4.1.1
-        - 4.2.1
-        - 4.2.2
-        - 4.2.3
-        - 4.2.4
-        - 4.2.5
-        - 4.2.6
-        - 4.2.8
-        - 5.0.0
-        - 5.0.1
-        - 5.0.2
-        - 5.0.3
-        - 5.0.4
-        - 5.0.5
-        - 5.0.6
-        - 5.0.7
-        - 5.0.8
-        - 5.0.9
-        - 5.0.10
-        - 5.1.0
-        - 5.1.1
-        - 5.2.0
-        - 5.2.1
-        - 6.0.0-pre.1
-        - 6.0.0-pre.2
-        - 6.0.1
-        - 6.0.3
-        - 6.0.4
-        - 6.0.5
-        - 6.0.7
-        - 7.0.0-pre.2
-        - 7.0.0-pre.3
-        - 7.0.0
-        - 7.0.1
-        - 7.0.2
-        - 7.0.3
-        - 7.0.4
-        - 7.0.5
-        - 8.0.0-pre.3
-        - 8.0.0-pre.4
-        - 8.0.0
-        - 8.0.1
-        - 9.0.0-pre.1
-        compatible:
-        - 5.0.6
-        - 5.0.7
-        - 5.0.8
-        - 5.0.9
-        - 5.0.10
-        verified: 5.0.10
-      dependencies:
-      - name: com.unity.2d.common
-        version: 4.0.3
-      - name: com.unity.mathematics
-        version: 1.1.0
-      - name: com.unity.2d.sprite
-        version: 1.0.0
-      - name: com.unity.modules.animation
-        version: 1.0.0
-      - name: com.unity.modules.uielements
-        version: 1.0.0
-      resolvedDependencies:
-      - name: com.unity.2d.common
-        version: 4.0.3
-      - name: com.unity.2d.sprite
-        version: 1.0.0
-      - name: com.unity.modules.uielements
-        version: 1.0.0
-      - name: com.unity.modules.ui
-        version: 1.0.0
-      - name: com.unity.modules.imgui
-        version: 1.0.0
-      - name: com.unity.modules.jsonserialize
-        version: 1.0.0
-      - name: com.unity.modules.uielementsnative
-        version: 1.0.0
-      - name: com.unity.mathematics
-        version: 1.1.0
-      - name: com.unity.modules.animation
-        version: 1.0.0
-      keywords:
-      - 2d
-      - animation
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637637510960000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 6f9c488e4d487ead34ee4d516f0a2f4a911a8b25
-        path: 
     - packageId: com.unity.2d.pixel-perfect@4.0.1
       testable: 0
       isDirectDependency: 1
@@ -266,12 +95,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: 7d7470f4ca0ea8353d4c9640b3b6ae9d1ebd9c1d
         path: 
-    - packageId: com.unity.2d.psdimporter@4.1.0
+    - packageId: com.unity.2d.psdimporter@4.1.3
       testable: 0
       isDirectDependency: 1
-      version: 4.1.0
+      version: 4.1.3
       source: 1
-      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.2d.psdimporter@4.1.0
+      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.2d.psdimporter@4.1.3
       assetPath: Packages/com.unity.2d.psdimporter
       name: com.unity.2d.psdimporter
       displayName: 2D PSD Importer
@@ -353,14 +182,14 @@ m_PackageAssets:
         verified: 4.1.3
       dependencies:
       - name: com.unity.2d.common
-        version: 4.0.3
+        version: 4.0.4
       - name: com.unity.2d.animation
-        version: 5.0.6
+        version: 5.0.10
       - name: com.unity.2d.sprite
         version: 1.0.0
       resolvedDependencies:
       - name: com.unity.2d.common
-        version: 4.0.3
+        version: 4.0.4
       - name: com.unity.2d.sprite
         version: 1.0.0
       - name: com.unity.modules.uielements
@@ -374,7 +203,7 @@ m_PackageAssets:
       - name: com.unity.modules.uielementsnative
         version: 1.0.0
       - name: com.unity.2d.animation
-        version: 5.0.7
+        version: 5.0.10
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.modules.animation
@@ -395,13 +224,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637594727750000000
+      datePublishedTicks: 637750142410000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 9e7fd5cbe078d004f1e87ecdf3b57436664a690a
+        revision: 341b7316671d7e6703a7627f67c5fab262c4f1ac
         path: 
     - packageId: com.unity.2d.sprite@1.0.0
       testable: 0
@@ -454,12 +283,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.unity.2d.spriteshape@5.1.4
+    - packageId: com.unity.2d.spriteshape@5.1.7
       testable: 0
       isDirectDependency: 1
-      version: 5.1.4
+      version: 5.1.7
       source: 1
-      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.2d.spriteshape@5.1.4
+      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.2d.spriteshape@5.1.7
       assetPath: Packages/com.unity.2d.spriteshape
       name: com.unity.2d.spriteshape
       displayName: 2D SpriteShape
@@ -557,7 +386,7 @@ m_PackageAssets:
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.2d.common
-        version: 4.0.3
+        version: 4.0.4
       - name: com.unity.2d.path
         version: 4.0.2
       - name: com.unity.modules.physics2d
@@ -566,7 +395,7 @@ m_PackageAssets:
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.2d.common
-        version: 4.0.3
+        version: 4.0.4
       - name: com.unity.2d.sprite
         version: 1.0.0
       - name: com.unity.modules.uielements
@@ -602,13 +431,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637637511330000000
+      datePublishedTicks: 637750142490000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 6f9c488e4d487ead34ee4d516f0a2f4a911a8b25
+        revision: 341b7316671d7e6703a7627f67c5fab262c4f1ac
         path: 
     - packageId: com.unity.2d.tilemap@1.0.0
       testable: 0
@@ -660,12 +489,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.unity.cinemachine@2.6.11
+    - packageId: com.unity.cinemachine@2.6.15
       testable: 0
       isDirectDependency: 1
-      version: 2.6.11
+      version: 2.6.15
       source: 1
-      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.cinemachine@2.6.11
+      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.cinemachine@2.6.15
       assetPath: Packages/com.unity.cinemachine
       name: com.unity.cinemachine
       displayName: Cinemachine
@@ -721,6 +550,8 @@ m_PackageAssets:
         - 2.6.9
         - 2.6.10
         - 2.6.11
+        - 2.6.14
+        - 2.6.15
         - 2.7.1
         - 2.7.2
         - 2.7.3
@@ -736,6 +567,7 @@ m_PackageAssets:
         - 2.8.2
         - 2.8.3
         - 2.8.4
+        - 2.8.6
         - 2.9.0-pre.1
         - 2.9.0-pre.6
         compatible:
@@ -756,6 +588,8 @@ m_PackageAssets:
         - 2.6.9
         - 2.6.10
         - 2.6.11
+        - 2.6.14
+        - 2.6.15
         - 2.7.1
         - 2.7.2
         - 2.7.3
@@ -771,9 +605,10 @@ m_PackageAssets:
         - 2.8.2
         - 2.8.3
         - 2.8.4
+        - 2.8.6
         - 2.9.0-pre.1
         - 2.9.0-pre.6
-        verified: 2.6.11
+        verified: 2.6.15
       dependencies: []
       resolvedDependencies: []
       keywords:
@@ -811,13 +646,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637715450880000000
+      datePublishedTicks: 637892795820000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.com/Unity-Technologies/com.unity.cinemachine.git
-        revision: 0eef4802dbe9ea60fc58767471ce4c5ea86632de
+        revision: 9799aa01355f2f7fb86c3cb5a6796b2d005e5c51
         path: 
     - packageId: com.unity.collab-proxy@1.9.0
       testable: 0
@@ -878,6 +713,7 @@ m_PackageAssets:
         - 1.14.15
         - 1.14.16
         - 1.14.17
+        - 1.14.18
         - 1.15.1
         - 1.15.4
         - 1.15.7
@@ -887,6 +723,7 @@ m_PackageAssets:
         - 1.15.15
         - 1.15.16
         - 1.15.17
+        - 1.15.18
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -912,6 +749,7 @@ m_PackageAssets:
         - 1.14.15
         - 1.14.16
         - 1.14.17
+        - 1.14.18
         - 1.15.1
         - 1.15.4
         - 1.15.7
@@ -921,6 +759,7 @@ m_PackageAssets:
         - 1.15.15
         - 1.15.16
         - 1.15.17
+        - 1.15.18
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -1057,7 +896,7 @@ m_PackageAssets:
         version: 1.1.1
       resolvedDependencies:
       - name: com.unity.test-framework
-        version: 1.1.29
+        version: 1.1.31
       - name: com.unity.ext.nunit
         version: 1.0.6
       - name: com.unity.modules.imgui
@@ -1085,12 +924,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
         revision: abb44f053e9a41d2e00e149e32a19bcec76e98b4
         path: 
-    - packageId: com.unity.ide.visualstudio@2.0.11
+    - packageId: com.unity.ide.visualstudio@2.0.15
       testable: 0
       isDirectDependency: 1
-      version: 2.0.11
+      version: 2.0.15
       source: 1
-      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.ide.visualstudio@2.0.11
+      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.ide.visualstudio@2.0.15
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -1150,7 +989,7 @@ m_PackageAssets:
         version: 1.1.9
       resolvedDependencies:
       - name: com.unity.test-framework
-        version: 1.1.29
+        version: 1.1.31
       - name: com.unity.ext.nunit
         version: 1.0.6
       - name: com.unity.modules.imgui
@@ -1170,20 +1009,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637613656180000000
+      datePublishedTicks: 637841884840000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-        revision: 680e06d94ffca728223ae2cb14bb919cd354e2c1
+        revision: ca1ece42f5a2c5484ba15a15bb975ccc1f6a1a3c
         path: 
-    - packageId: com.unity.ide.vscode@1.2.3
+    - packageId: com.unity.ide.vscode@1.2.5
       testable: 0
       isDirectDependency: 1
-      version: 1.2.3
+      version: 1.2.5
       source: 1
-      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.ide.vscode@1.2.5
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -1243,20 +1082,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637394922300000000
+      datePublishedTicks: 637800255360000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
-        revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
+        url: https://github.com/Unity-Technologies/com.unity.ide.vscode.git
+        revision: b0740c80bfc2440527c317109f7c3d9100132722
         path: 
-    - packageId: com.unity.test-framework@1.1.29
+    - packageId: com.unity.test-framework@1.1.31
       testable: 0
       isDirectDependency: 1
-      version: 1.1.29
+      version: 1.1.31
       source: 1
-      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.test-framework@1.1.29
+      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.test-framework@1.1.31
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -1344,13 +1183,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637647922650000000
+      datePublishedTicks: 637804266210000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
-        revision: dac53542acdab7a12e9ebf111ac588d0e53cf483
+        url: https://github.com/Unity-Technologies/com.unity.test-framework.git
+        revision: 438b0defc147c9be5c969ca79ff03a722b4590ed
         path: 
     - packageId: com.unity.textmeshpro@3.0.6
       testable: 0
@@ -3633,12 +3472,12 @@ m_PackageAssets:
         url: git@github.com:Unity-Technologies/Unity.Mathematics.git
         revision: 0a3dfafaf606098ea681de4c4be60f3aac63b773
         path: 
-    - packageId: com.unity.2d.common@4.0.3
+    - packageId: com.unity.2d.common@4.0.4
       testable: 0
       isDirectDependency: 0
-      version: 4.0.3
+      version: 4.0.4
       source: 1
-      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.2d.common@4.0.3
+      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.2d.common@4.0.4
       assetPath: Packages/com.unity.2d.common
       name: com.unity.2d.common
       displayName: 2D Common
@@ -3725,13 +3564,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637408843940000000
+      datePublishedTicks: 637750142160000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: c97def465b1932276762fc13f4cfee58da99d5e9
+        revision: 341b7316671d7e6703a7627f67c5fab262c4f1ac
         path: 
     - packageId: com.unity.2d.path@4.0.2
       testable: 0
@@ -3802,6 +3641,178 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: 6f9c488e4d487ead34ee4d516f0a2f4a911a8b25
+        path: 
+    - packageId: com.unity.2d.animation@5.0.10
+      testable: 0
+      isDirectDependency: 1
+      version: 5.0.10
+      source: 1
+      resolvedPath: G:\Github\Platfomer_Game\PLatformerGame\Library\PackageCache\com.unity.2d.animation@5.0.10
+      assetPath: Packages/com.unity.2d.animation
+      name: com.unity.2d.animation
+      displayName: 2D Animation
+      author:
+        name: 
+        email: 
+        url: 
+      category: 2D
+      type: 
+      description: 2D Animation provides all the necessary tooling and runtime components
+        for skeletal animation using Sprites.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.15-preview.1
+        - 1.0.15-preview.2
+        - 1.0.15-preview.3
+        - 1.0.15-preview.4
+        - 1.0.15-preview.5
+        - 1.0.16-preview
+        - 1.0.16-preview.1
+        - 1.0.16-preview.2
+        - 2.0.0-preview.1
+        - 2.0.0-preview.2
+        - 2.0.0-preview.3
+        - 2.1.0-preview.1
+        - 2.1.0-preview.2
+        - 2.1.0-preview.4
+        - 2.1.0-preview.5
+        - 2.1.0-preview.7
+        - 2.2.0-preview.1
+        - 2.2.0-preview.4
+        - 2.2.0-preview.5
+        - 2.2.1-preview.1
+        - 2.2.1-preview.2
+        - 3.0.2
+        - 3.0.3
+        - 3.0.4
+        - 3.0.5
+        - 3.0.6
+        - 3.0.8
+        - 3.1.0
+        - 3.1.1
+        - 3.2.1
+        - 3.2.2
+        - 3.2.3
+        - 3.2.4
+        - 3.2.5
+        - 3.2.6
+        - 3.2.9
+        - 3.2.10
+        - 3.2.11
+        - 3.2.13
+        - 3.2.14
+        - 3.2.15
+        - 3.2.16
+        - 3.2.17
+        - 3.2.18
+        - 4.0.0
+        - 4.0.1
+        - 4.1.0
+        - 4.1.1
+        - 4.2.1
+        - 4.2.2
+        - 4.2.3
+        - 4.2.4
+        - 4.2.5
+        - 4.2.6
+        - 4.2.8
+        - 5.0.0
+        - 5.0.1
+        - 5.0.2
+        - 5.0.3
+        - 5.0.4
+        - 5.0.5
+        - 5.0.6
+        - 5.0.7
+        - 5.0.8
+        - 5.0.9
+        - 5.0.10
+        - 5.1.0
+        - 5.1.1
+        - 5.2.0
+        - 5.2.1
+        - 6.0.0-pre.1
+        - 6.0.0-pre.2
+        - 6.0.1
+        - 6.0.3
+        - 6.0.4
+        - 6.0.5
+        - 6.0.7
+        - 7.0.0-pre.2
+        - 7.0.0-pre.3
+        - 7.0.0
+        - 7.0.1
+        - 7.0.2
+        - 7.0.3
+        - 7.0.4
+        - 7.0.5
+        - 7.0.6
+        - 8.0.0-pre.3
+        - 8.0.0-pre.4
+        - 8.0.0
+        - 8.0.1
+        - 9.0.0-pre.1
+        compatible:
+        - 5.0.6
+        - 5.0.7
+        - 5.0.8
+        - 5.0.9
+        - 5.0.10
+        verified: 5.0.10
+      dependencies:
+      - name: com.unity.2d.common
+        version: 4.0.4
+      - name: com.unity.mathematics
+        version: 1.1.0
+      - name: com.unity.2d.sprite
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.modules.uielements
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.2d.common
+        version: 4.0.4
+      - name: com.unity.2d.sprite
+        version: 1.0.0
+      - name: com.unity.modules.uielements
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.uielementsnative
+        version: 1.0.0
+      - name: com.unity.mathematics
+        version: 1.1.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      keywords:
+      - 2d
+      - animation
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637750142350000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/2d.git
+        revision: 341b7316671d7e6703a7627f67c5fab262c4f1ac
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []

@@ -29,7 +29,14 @@ public class PlayerMovement : MonoBehaviour
 			animator.SetBool("IsGrounded", false);
 		}
 
-		
+		if (Input.GetButtonDown("Crouch"))
+		{
+			crouch = true;
+		}
+		else if (Input.GetButtonUp("Crouch"))
+		{
+			crouch = false;
+		}
 
 	}
 
@@ -39,7 +46,10 @@ public class PlayerMovement : MonoBehaviour
 		animator.SetBool("IsGrounded", true);
 	}
 
-	
+	public void OnCrouching(bool isCrouching)
+	{
+		animator.SetBool("IsCrouching", isCrouching);
+	}
 
 	void FixedUpdate()
 	{
