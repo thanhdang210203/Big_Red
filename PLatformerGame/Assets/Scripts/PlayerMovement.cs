@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			jump = true;
 			animator.SetBool("IsJumping", true);
+			animator.SetBool("IsGrounded", false);
 		}
 
 		if (Input.GetButtonDown("Crouch"))
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
 	public void OnLanding()
 	{
 		animator.SetBool("IsJumping", false);
+		animator.SetBool("IsGrounded", true);
 	}
 
 	public void OnCrouching(bool isCrouching)
