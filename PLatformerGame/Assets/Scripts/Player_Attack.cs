@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Attack : MonoBehaviour
@@ -9,39 +7,38 @@ public class Player_Attack : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    private int m_currentAttack = 0;
-    private float m_timeSinceAttack = 0.0f;
-
+    private int currentAttack = 0;
+    private float timeSinceAttack = 0.0f;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         //if (Input.GetMouseButtonDown(0))
         //{
         //    Attack();
         //}
-         //Attack();
-            if (Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f)
-            {
-                m_currentAttack++;
+        //Attack();
+        if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f)
+        {
+            currentAttack++;
 
-                // Loop back to one after third attack
-                if (m_currentAttack > 3)
-                    m_currentAttack = 1;
+            // Loop back to one after third attack
+            if (currentAttack > 3)
+                currentAttack = 1;
 
-                // Reset Attack combo if time since last attack is too large
-                if (m_timeSinceAttack > 1.0f)
-                    m_currentAttack = 1;
+            // Reset Attack combo if time since last attack is too large
+            if (timeSinceAttack > 1.0f)
+                currentAttack = 1;
 
-                // Call one of three attack animations "Attack1", "Attack2", "Attack3"
-                animator.SetTrigger("Slice" + m_currentAttack);
+            // Call one of three attack animations "Attack1", "Attack2", "Attack3"
+            animator.SetTrigger("Slice" + currentAttack);
 
-                // Reset timer
-                m_timeSinceAttack = 0.0f;
-            }
+            // Reset timer
+            timeSinceAttack = 0.0f;
         }
+    }
 
-    void Attack()
+    private void Attack()
     {
         animator.SetTrigger("Slice 1");
 

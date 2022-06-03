@@ -1,17 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 
 public class Button_Click : MonoBehaviour
 {
-    
-
     private void Start()
     {
-        
     }
 
     // Start is called before the first frame update
@@ -37,7 +30,6 @@ public class Button_Click : MonoBehaviour
     {
         Debug.Log("Loading Level");
         SceneManager.LoadScene("1");
-        
     }
 
     public void selectLevel2()
