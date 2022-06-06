@@ -9,7 +9,7 @@ public class Player_Attack : MonoBehaviour
     public LayerMask enemyLayers;
     private int currentAttack = 0;
     private float timeSinceAttack = 0.0f;
-
+    private bool facingRight = true;
     // Update is called once per frame
     private void Update()
     {
@@ -18,7 +18,7 @@ public class Player_Attack : MonoBehaviour
         //    Attack();
         //}
         //Attack();
-        if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f)
+        if (Input.GetMouseButtonDown(0))
         {
             currentAttack++;
 
@@ -35,6 +35,12 @@ public class Player_Attack : MonoBehaviour
 
             // Reset timer
             timeSinceAttack = 0.0f;
+        }
+
+       else if (Input.GetMouseButtonDown(1))
+        {
+            animator.SetTrigger("Bow");
+            //add delay later
         }
     }
 
@@ -56,5 +62,21 @@ public class Player_Attack : MonoBehaviour
             return;
 
         Gizmos.DrawSphere(attackPoint.position, attackRange);
+    }
+    private void Flip()
+    {
+        Debug.Log("Flipppppp");
+
+        //set the facingRight variable to the opposite of what it was
+        facingRight = !facingRight;
+
+        //store the scale of the player in a variable
+        Vector2 playerScale = this.transform.localScale;
+
+        //reverse the direction of the player
+        playerScale.x = playerScale.x * -1;
+
+        //set the player's scale to the new value
+        this.transform.localScale = playerScale;
     }
 }
