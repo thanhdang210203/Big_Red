@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class Health_Sys : MonoBehaviour
 {
     public int maxHealth = 100;
@@ -7,7 +7,8 @@ public class Health_Sys : MonoBehaviour
     public bool Player_Dead;
     public Health_Bar healthBar;
     private Animator Character_Ani;
-
+    public int healthPickUp = 20;
+    public GameObject heart;
     // Start is called before the first frame update
     private void Start()
     {
@@ -18,11 +19,7 @@ public class Health_Sys : MonoBehaviour
 
     // Update is called once per frame
     private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-        }
-
+    { 
         if (currentHealth == 0)
         {
             Player_Dead = true;
@@ -35,5 +32,14 @@ public class Health_Sys : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Heart")
+        {
+            currentHealth += healthPickUp;
+            Debug.Log("health boosted");
+            heart.SetActive(false);
+        }
     }
 }

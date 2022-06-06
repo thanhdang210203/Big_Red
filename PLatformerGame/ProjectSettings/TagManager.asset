@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Skullman
+  - Heart
+  - Attack
   layers:
   - Default
   - TransparentFX
@@ -13,7 +16,7 @@ TagManager:
   - UI
   - Ground_Check
   - Player
-  - Enemies
+  - SkullMan
   - 
   - 
   - 

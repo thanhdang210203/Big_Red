@@ -15,17 +15,16 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Transform groundCheckCollider;
     private const float groundCheckRadious = 0.2f;
     [SerializeField] private LayerMask groundLayer;
-    Animator Character_anim;
+    private Animator Character_anim;
     private bool Falling_Down = false;
-   
+
     [Header("Events")]
     [Space]
-
     public UnityEvent OnLandEvent;
 
     [System.Serializable]
-    public class BoolEvent : UnityEvent<bool> { }
-
+    public class BoolEvent : UnityEvent<bool>
+    { }
 
     private void Awake()
     {
@@ -34,6 +33,7 @@ public class CharacterController2D : MonoBehaviour
         if (OnLandEvent == null)
             OnLandEvent = new UnityEvent();
     }
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -74,12 +74,13 @@ public class CharacterController2D : MonoBehaviour
         {
             isGrounded = true;
         }
+        else
+        {
+            isGrounded = false;
 
-        else isGrounded = false;
-       
+        }
     }
-
-    private void Movement()
+        private void Movement()
     {
         //Stores the player's position as Vector2 variable
         Vector2 playerPos = this.transform.position;
@@ -91,8 +92,7 @@ public class CharacterController2D : MonoBehaviour
             playerPos.x = playerPos.x + running_speed; //move playerPos a small amount to the right
             this.transform.position = playerPos; //update the player's position to the new value
 
-            Character_anim.SetTrigger("isRunning");
-
+           
             if (facingRight == false)
             {
                 Flip();
@@ -104,7 +104,7 @@ public class CharacterController2D : MonoBehaviour
             playerPos.x = playerPos.x - running_speed;
             this.transform.position = playerPos;
 
-            Character_anim.SetTrigger("isRunning");
+          
 
             if (facingRight == true)
             {
@@ -121,8 +121,5 @@ public class CharacterController2D : MonoBehaviour
             Character_anim.SetTrigger("IsJumping");
             Debug.Log("Jumppppp");
         }
-       
     }
-
-    
 }

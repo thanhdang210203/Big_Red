@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player_Attack : MonoBehaviour
@@ -10,16 +11,28 @@ public class Player_Attack : MonoBehaviour
     private int currentAttack = 0;
     private float timeSinceAttack = 0.0f;
     private bool facingRight = true;
+    [SerializeField] private bool CanShootBow = true;
+    [SerializeField] private int MaxShoot = 5;
+    [SerializeField] private int CurrentShot = 0;
+    public int attackDamage = 40;
     // Update is called once per frame
     private void Update()
     {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Attack();
-        //}
-        //Attack();
         if (Input.GetMouseButtonDown(0))
         {
+            Attack();
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            RangeAttack();
+        }
+           
+    }
+
+    private void Attack()
+    {
+       
+        
             currentAttack++;
 
             // Loop back to one after third attack
@@ -35,24 +48,33 @@ public class Player_Attack : MonoBehaviour
 
             // Reset timer
             timeSinceAttack = 0.0f;
-        }
-
-       else if (Input.GetMouseButtonDown(1))
-        {
-            animator.SetTrigger("Bow");
-            //add delay later
-        }
-    }
-
-    private void Attack()
-    {
-        animator.SetTrigger("Slice 1");
-
+        
         Collider2D[] hitEnemise = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemise)
         {
+            enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
             Debug.Log("We hit " + enemy.name);
+        
+        }
+       
+    }
+
+    public void RangeAttack()
+    {
+        if (CanShootBow == true)
+        {
+            animator.SetBool("CanShotBow", true);
+            animator.SetTrigger("Bow");
+            //add delay later
+            StartCoroutine(BowDelay());
+            CurrentShot++;
+            if (CurrentShot == MaxShoot)
+            {
+                CurrentShot = MaxShoot;
+                animator.SetBool("CanShotBow", false);
+                CanShootBow = false;
+            }
         }
     }
 
@@ -63,20 +85,11 @@ public class Player_Attack : MonoBehaviour
 
         Gizmos.DrawSphere(attackPoint.position, attackRange);
     }
-    private void Flip()
+
+    private IEnumerator BowDelay()
     {
-        Debug.Log("Flipppppp");
-
-        //set the facingRight variable to the opposite of what it was
-        facingRight = !facingRight;
-
-        //store the scale of the player in a variable
-        Vector2 playerScale = this.transform.localScale;
-
-        //reverse the direction of the player
-        playerScale.x = playerScale.x * -1;
-
-        //set the player's scale to the new value
-        this.transform.localScale = playerScale;
+        CanShootBow = false;
+        yield return new WaitForSeconds(0.69f);
+        CanShootBow = true;
     }
 }

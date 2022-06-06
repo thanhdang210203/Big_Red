@@ -21,9 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnLanding()
     {
-        
-            animator.SetBool("isGrounded", true);
-        
-       
+        animator.SetBool("isGrounded", true);
     }
 }
