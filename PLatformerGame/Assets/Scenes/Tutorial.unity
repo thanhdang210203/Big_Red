@@ -401,6 +401,10 @@ PrefabInstance:
       propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8317459077447522854, guid: 3e46631252d3f644683cb7ed6351c711, type: 3}
+      propertyPath: attackRange
+      value: 0.42
+      objectReference: {fileID: 0}
     - target: {fileID: 8317459077447522906, guid: 3e46631252d3f644683cb7ed6351c711, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2189,6 +2193,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 881895889}
     m_Modifications:
+    - target: {fileID: 6767503406776094837, guid: 36224cf5f13e60a459434d4e2843406c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767503406776094837, guid: 36224cf5f13e60a459434d4e2843406c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767503406776094837, guid: 36224cf5f13e60a459434d4e2843406c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0000095367
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767503406776094837, guid: 36224cf5f13e60a459434d4e2843406c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 96
+      objectReference: {fileID: 0}
     - target: {fileID: 6767503407309902919, guid: 36224cf5f13e60a459434d4e2843406c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2239,11 +2259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6767503407702533093, guid: 36224cf5f13e60a459434d4e2843406c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: -119.9232
       objectReference: {fileID: 0}
     - target: {fileID: 6767503407702533093, guid: 36224cf5f13e60a459434d4e2843406c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6767503407702533093, guid: 36224cf5f13e60a459434d4e2843406c, type: 3}
       propertyPath: m_LocalScale.x
@@ -2283,11 +2303,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6767503407702533093, guid: 36224cf5f13e60a459434d4e2843406c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 8.8207
       objectReference: {fileID: 0}
     - target: {fileID: 6767503407702533093, guid: 36224cf5f13e60a459434d4e2843406c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 28.219
       objectReference: {fileID: 0}
     - target: {fileID: 6767503407702533093, guid: 36224cf5f13e60a459434d4e2843406c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

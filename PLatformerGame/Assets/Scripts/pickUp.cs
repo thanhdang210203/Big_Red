@@ -23,7 +23,7 @@ public class pickUp : MonoBehaviour
     {
        if(collision.tag == "Heart")
         {
-            currentHealth += healthPickUp;
+            Debug.Log("Gain health");
         }
     }
 }
