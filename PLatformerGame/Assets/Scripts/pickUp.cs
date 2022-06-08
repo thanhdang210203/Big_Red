@@ -1,28 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class pickUp : MonoBehaviour
 {
-    Health_Sys currentHealth;
-    int healthPickUp = 20;
+    [SerializeField] private int healthValue;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-       if(collision.tag == "Heart")
+        if (collision.tag == "Player")
         {
+            collision.GetComponent<Health_Sys>().TakePortion(healthValue);
+            gameObject.SetActive(false);
             Debug.Log("Gain health");
         }
     }

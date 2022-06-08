@@ -4,7 +4,6 @@ using UnityEngine.Events;
 public class CharacterController2D : MonoBehaviour
 {
     //declare values
-    public float walking_speed = 0.002f;
 
     public float running_speed = 0.005f;
     private bool facingRight = true;
@@ -17,6 +16,8 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     private Animator Character_anim;
     private bool Falling_Down = false;
+    private bool CanDash = false;
+    private bool isJumping = false;
 
     [Header("Events")]
     [Space]
@@ -68,8 +69,11 @@ public class CharacterController2D : MonoBehaviour
 
     private void GroundCheck()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f);
+        Vector2 position = transform.position;
+        Vector2 direction = Vector2.down;
+        float distance = 1.0f;
 
+        RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, groundLayer);
         if (hit.collider != null)
         {
             isGrounded = true;
@@ -77,10 +81,10 @@ public class CharacterController2D : MonoBehaviour
         else
         {
             isGrounded = false;
-
         }
     }
-        private void Movement()
+
+    private void Movement()
     {
         //Stores the player's position as Vector2 variable
         Vector2 playerPos = this.transform.position;
@@ -92,7 +96,6 @@ public class CharacterController2D : MonoBehaviour
             playerPos.x = playerPos.x + running_speed; //move playerPos a small amount to the right
             this.transform.position = playerPos; //update the player's position to the new value
 
-           
             if (facingRight == false)
             {
                 Flip();
@@ -104,12 +107,16 @@ public class CharacterController2D : MonoBehaviour
             playerPos.x = playerPos.x - running_speed;
             this.transform.position = playerPos;
 
-          
-
             if (facingRight == true)
             {
                 Flip();
             }
+        }
+        else if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift) == true)
+        {
+        }
+        else if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift) == true)
+        {
         }
     }
 
