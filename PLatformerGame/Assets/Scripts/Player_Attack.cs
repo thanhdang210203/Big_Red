@@ -30,7 +30,6 @@ public class Player_Attack : MonoBehaviour
         else if (Input.GetMouseButtonDown(1))
         {
             RangeAttack();
-            nextAttackTime = Time.time + 1f / attackRate;
         }
     }
 

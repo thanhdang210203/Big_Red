@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class damagePlayer : MonoBehaviour
 {
-    public int attackDamage;
+    public int attackDamage = 2;
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask playerLayers;
@@ -13,7 +13,7 @@ public class damagePlayer : MonoBehaviour
     {
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
 

@@ -6,12 +6,16 @@ public class Pause : MonoBehaviour
 {
     public static bool GamePaused = false;
     public GameObject pauseMenu;
-
+    private Score ScoreManager;
+    public GameObject health;
+    public GameObject score_text;
     private void Start()
     {
         GamePaused = false;
 
         pauseMenu.SetActive(false);
+
+        ScoreManager = FindObjectOfType<Score>();
     }
 
     private void Update()
@@ -32,7 +36,8 @@ public class Pause : MonoBehaviour
     private void Resume()
     {
         pauseMenu.SetActive(false);
-
+        health.SetActive(true);
+        score_text.SetActive(true);
         Time.timeScale = 1f;
         GamePaused = false;
     }
@@ -40,7 +45,8 @@ public class Pause : MonoBehaviour
     private void StopGame()
     {
         pauseMenu.SetActive(true);
-
+        health.SetActive(false);
+        score_text.SetActive(false);
         Time.timeScale = 0f;
         GamePaused = true;
     }
@@ -73,6 +79,7 @@ public class Pause : MonoBehaviour
         GamePaused = false;
         Time.timeScale = 1f;
         StartCoroutine(Reload());
+        
     }
 
     public void NextLevel()
@@ -80,12 +87,14 @@ public class Pause : MonoBehaviour
         Debug.Log("Next Level loading...");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Time.timeScale = 1f;
+        ScoreManager.ScoreNum = 0;
     }
 
     private IEnumerator Reload()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.2f);
         Resources.UnloadUnusedAssets();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ScoreManager.ScoreNum = 0;
     }
 }

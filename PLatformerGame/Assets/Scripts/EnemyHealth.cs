@@ -10,11 +10,14 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private bool EnemyDied = false;
     public Animator Animate;
     public int Skullman_Point = 100;
+    public GameObject ItemDrop;
+    private Score ScoreManager;
 
     // Start is called before the first frame update
     private void Start()
     {
         currentHealth = maxHealth;
+        ScoreManager = FindObjectOfType<Score>();
     }
 
     // Update is called once per frame
@@ -45,7 +48,7 @@ public class EnemyHealth : MonoBehaviour
             if (this.gameObject.tag == "Skullman")
             {
                 Debug.Log("Skullman died");
-                Score.ScoreNum += 100;
+                ScoreManager.ScoreNum += 100;
             }
         }
     }
@@ -54,5 +57,6 @@ public class EnemyHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         self.SetActive(false);
+        Instantiate(ItemDrop, this.transform.position, Quaternion.identity);
     }
 }

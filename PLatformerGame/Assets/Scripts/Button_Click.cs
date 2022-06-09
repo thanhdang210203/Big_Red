@@ -3,8 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class Button_Click : MonoBehaviour
 {
+    private Score scoreManager;
+
     private void Start()
     {
+        scoreManager = FindObjectOfType<Score>();
     }
 
     // Start is called before the first frame update
@@ -12,6 +15,7 @@ public class Button_Click : MonoBehaviour
     {
         Debug.Log("Loading Level");
         SceneManager.LoadScene("Level 1");
+        scoreManager.ScoreNum = 0;
     }
 
     public void selectLevel()

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health_Sys : MonoBehaviour
 {
@@ -6,10 +7,10 @@ public class Health_Sys : MonoBehaviour
     public int currentHealth;
     public bool Player_Dead;
     public Health_Bar healthBar;
-    private Animator Character_Ani;
+    public Animator Character_Ani;
     public int healthPickUp = 20;
     public GameObject heart;
-    public LayerMask enemies_attack;
+    private Score ScoreManager;
 
     // Start is called before the first frame update
     private void Start()
@@ -17,6 +18,8 @@ public class Health_Sys : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         Player_Dead = false;
+
+        ScoreManager = FindObjectOfType<Score>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,9 @@ public class Health_Sys : MonoBehaviour
         {
             Player_Dead = true;
             Character_Ani.SetBool("playerDead", true);
+            Resources.UnloadUnusedAssets();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            ScoreManager.ScoreNum = 0;
         }
     }
 

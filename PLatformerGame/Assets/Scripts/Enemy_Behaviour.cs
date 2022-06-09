@@ -115,11 +115,10 @@ public class Enemy_Behaviour : MonoBehaviour
         }
     }
 
-    private void Attack()
+    public void Attack()
     {
         timer = intTimer; //Reset Timer when Player enter Attack Range
         attackMode = true; //To check if Enemy can still attack or not
-
         anim.SetBool("canWalk", false);
         anim.SetBool("Attack", true);
     }
