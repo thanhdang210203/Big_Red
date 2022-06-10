@@ -9,7 +9,6 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int currentHealth;
     [SerializeField] private bool EnemyDied = false;
     public Animator Animate;
-    public int Skullman_Point = 100;
     public GameObject ItemDrop;
     private Score ScoreManager;
 
@@ -49,6 +48,16 @@ public class EnemyHealth : MonoBehaviour
             {
                 Debug.Log("Skullman died");
                 ScoreManager.ScoreNum += 100;
+            }
+            else if (this.gameObject.tag == "SkullGuard")
+            {
+                Debug.Log("SkullGuard died");
+                ScoreManager.ScoreNum += 150;
+            }
+            else if(this.gameObject.tag == "Skullman_Spear")
+            {
+                Debug.Log("Skullman Spear died");
+                ScoreManager.ScoreNum += 200;
             }
         }
     }

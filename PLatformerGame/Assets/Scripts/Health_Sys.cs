@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
 public class Health_Sys : MonoBehaviour
 {
     public int maxHealth = 100;
@@ -11,14 +11,14 @@ public class Health_Sys : MonoBehaviour
     public int healthPickUp = 20;
     public GameObject heart;
     private Score ScoreManager;
-
+    [SerializeField] private bool canTakeDamage;
     // Start is called before the first frame update
     private void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         Player_Dead = false;
-
+        canTakeDamage = true;
         ScoreManager = FindObjectOfType<Score>();
     }
 
@@ -33,13 +33,32 @@ public class Health_Sys : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             ScoreManager.ScoreNum = 0;
         }
+        if (currentHealth >= 100)
+        {
+            currentHealth = 100;
+        }
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        Character_Ani.SetTrigger("isHurt");
-        healthBar.SetHealth(currentHealth);
+        if (canTakeDamage)
+        {
+            currentHealth -= damage;
+            Character_Ani.SetTrigger("isHurt");
+            healthBar.SetHealth(currentHealth);
+        }
+        
+    }
+
+    public void Invicibility(bool noDmg)
+    {
+        if (noDmg == true)
+        {
+            canTakeDamage = false;
+            StartCoroutine(Wait());
+            canTakeDamage = true;
+        }
+        
     }
 
     public void TakePortion(int healthPickup)
@@ -57,5 +76,10 @@ public class Health_Sys : MonoBehaviour
             Debug.Log("health boosted");
             heart.SetActive(false);
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(3.0f);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class Player_Attack : MonoBehaviour
 {
     public Animator animator;
-
+    [SerializeField] private bool attackGained = false;
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public float attackRate = 2.0f;
@@ -19,6 +19,7 @@ public class Player_Attack : MonoBehaviour
     public int attackDamage = 40;
 
     // Update is called once per frame
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -60,6 +61,13 @@ public class Player_Attack : MonoBehaviour
         }
     }
 
+    public void GainDamage(int attackAdd)
+    {
+        attackGained = true;
+        attackDamage = attackDamage * attackAdd;
+        StartCoroutine(CoolDown());
+    }
+
     public void RangeAttack()
     {
         if (CanShootBow == true)
@@ -91,5 +99,12 @@ public class Player_Attack : MonoBehaviour
         CanShootBow = false;
         yield return new WaitForSeconds(0.69f);
         CanShootBow = true;
+    }
+
+    public IEnumerator CoolDown()
+    {
+        yield return new WaitForSeconds(3.0f);
+        attackGained = false;
+        attackDamage = 40;
     }
 }

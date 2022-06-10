@@ -1,32 +1,40 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
     //declare values
-
+    #region Public
+    public AudioClip Dashing_Sound;
     public float running_speed = 0.005f;
-    private bool facingRight = true;
+    public float dash_speed;
+    public float dashTime;
     public float Jump_force;
-    public Rigidbody2D Player;
+    public Rigidbody2D Player;   
+    public bool CanDash;
+    #endregion
+    #region Private
+    private bool facingRight = true;
     private GameObject Groundmask;
-    public bool isGrounded = false;
     [SerializeField] private Transform groundCheckCollider;
     private const float groundCheckRadious = 0.2f;
     [SerializeField] private LayerMask groundLayer;
     private Animator Character_anim;
     private bool Falling_Down = false;
-    private bool CanDash = false;
     private bool isJumping = false;
+    private Vector2 playerPos;
+    [SerializeField] private bool isGrounded = false;
+    #endregion
 
+    #region Bool Events
     [Header("Events")]
     [Space]
     public UnityEvent OnLandEvent;
-
     [System.Serializable]
     public class BoolEvent : UnityEvent<bool>
     { }
-
+    #endregion
     private void Awake()
     {
         Player = GetComponent<Rigidbody2D>();
@@ -65,6 +73,7 @@ public class CharacterController2D : MonoBehaviour
         GroundCheck();
         Movement();
         Jump();
+        
     }
 
     private void GroundCheck()
@@ -90,7 +99,7 @@ public class CharacterController2D : MonoBehaviour
         Vector2 playerPos = this.transform.position;
 
         //running left and right
-        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift) == false)
+        if (Input.GetKey(KeyCode.D))
         {
             //Debug.Log("running right");
             playerPos.x = playerPos.x + running_speed; //move playerPos a small amount to the right
@@ -101,7 +110,7 @@ public class CharacterController2D : MonoBehaviour
                 Flip();
             }
         }
-        else if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift) == false)
+        else if (Input.GetKey(KeyCode.A))
         {
             //Debug.Log("running left");
             playerPos.x = playerPos.x - running_speed;
@@ -111,12 +120,6 @@ public class CharacterController2D : MonoBehaviour
             {
                 Flip();
             }
-        }
-        else if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift) == true)
-        {
-        }
-        else if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift) == true)
-        {
         }
     }
 
@@ -128,5 +131,40 @@ public class CharacterController2D : MonoBehaviour
             Character_anim.SetTrigger("IsJumping");
             Debug.Log("Jumppppp");
         }
+    }
+
+    //public void Dash()
+    //{
+    //    if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift) && CanDash == true)
+    //    {
+    //        //playerPos.x = playerPos.x + dash_speed; //move playerPos a small amount to the right
+    //        //this.transform.position = playerPos; //update the player's position to the new value
+    //        //Player.velocity = Vector2.right * Jump_force;
+    //        Debug.Log("Is Dashinggggg");
+    //        if (facingRight == false)
+    //        {
+    //            Flip();
+    //        }
+    //        StartCoroutine(Latecall_Dash());
+    //    }
+    //    else if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift) && CanDash == true)
+    //    {
+    //        //playerPos.x = playerPos.x - dash_speed;
+            
+    //        //Player.velocity = Vector2.up * Jump_force;
+    //        Debug.Log("Is Dashinggggg");
+    //        if (facingRight == true)
+    //        {
+    //            Flip();
+    //        }
+    //        StartCoroutine(Latecall_Dash());
+    //    }
+    //}
+
+    private IEnumerator Latecall_Dash()
+    {
+        CanDash = false;
+        yield return new WaitForSeconds(dashTime);
+        CanDash = true;
     }
 }

@@ -7,6 +7,12 @@ TagManager:
   - Skullman
   - Heart
   - Attack
+  - SkullGuard
+  - DeadZone
+  - Goal
+  - Skullman_Spear
+  - Clock
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -17,8 +23,8 @@ TagManager:
   - Ground_Check
   - Player
   - SkullMan
-  - 
-  - 
+  - SkullGuard
+  - Skullman_Spear
   - 
   - 
   - 
