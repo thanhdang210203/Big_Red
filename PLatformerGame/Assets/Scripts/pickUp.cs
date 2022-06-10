@@ -5,7 +5,7 @@ public class pickUp : MonoBehaviour
 {
     [SerializeField] private int healthValue = 20;
     [SerializeField] private int attackAdd = 2;
-    [SerializeField] private bool noDmg = true;
+    public bool noDmg = false;
     // Start is called before the first frame update
     private void Start()
     {
@@ -66,8 +66,9 @@ public class pickUp : MonoBehaviour
         {
             if (collision.tag == "Player")
             {
+                noDmg = true;
                 collision.GetComponent<Health_Sys>().Invicibility(noDmg);
-                Destroy(gameObject);
+                gameObject.SetActive(false);
                 Debug.Log("No damage");
             }
         }
@@ -78,7 +79,7 @@ public class pickUp : MonoBehaviour
         
         Debug.Log("time slowed down");
         Destroy(gameObject);
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(5.0f);
         Debug.Log("time normal");
         Time.timeScale = 1.0f;
     }

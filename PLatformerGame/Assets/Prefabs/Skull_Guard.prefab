@@ -310,7 +310,7 @@ MonoBehaviour:
   currentHealth: 150
   EnemyDied: 0
   Animate: {fileID: 4296536180556762132}
-  ItemDrop: {fileID: 0}
+  ItemDrop: {fileID: 6164314054452740938, guid: 2a83832c29930c34b8530173a3767a08, type: 3}
 --- !u!114 &4296536180556762129
 MonoBehaviour:
   m_ObjectHideFlags: 0

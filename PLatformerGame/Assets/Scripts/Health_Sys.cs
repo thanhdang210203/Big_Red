@@ -49,7 +49,7 @@ public class Health_Sys : MonoBehaviour
         }
         else if(canTakeDamage == false)
         {
-            
+            currentHealth = 100;
         }    
       
     }
@@ -59,9 +59,7 @@ public class Health_Sys : MonoBehaviour
       
             canTakeDamage = false;
             StartCoroutine(Wait());
-            canTakeDamage = true;
-        
-        
+              
     }
 
     public void TakePortion(int healthPickup)
@@ -84,5 +82,7 @@ public class Health_Sys : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(3.0f);
+        canTakeDamage = true;
+        Debug.Log("tiMER OUT");
     }
 }

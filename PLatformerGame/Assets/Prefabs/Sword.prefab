@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3543586572353007756}
   - component: {fileID: 3543586572353007754}
   - component: {fileID: 3543586572353007755}
-  - component: {fileID: 1254034890714344045}
+  - component: {fileID: -8807269722897271247}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Attack
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1440517873
-  m_SortingLayer: 3
+  m_SortingLayerID: -1281367445
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fc166174f0ce70b4197d9e2700c66abd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthValue: 0
   attackAdd: 2
+  noDmg: 0
 --- !u!60 &3543586572353007755
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -146,7 +147,7 @@ PolygonCollider2D:
       - {x: 0.35999998, y: -0.39999998}
       - {x: 0.34, y: -0.29999998}
       - {x: 0.29999998, y: -0.19999999}
---- !u!50 &1254034890714344045
+--- !u!50 &-8807269722897271247
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

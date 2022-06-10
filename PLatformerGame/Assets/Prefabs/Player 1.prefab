@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8317459077447522852}
   - component: {fileID: 5255029001998250941}
   - component: {fileID: 8317459077447522854}
+  - component: {fileID: -6969379321242276481}
   m_Layer: 7
   m_Name: Player 1
   m_TagString: Player
@@ -231,7 +232,7 @@ MonoBehaviour:
   animator: {fileID: 8317459077447522910}
   attackGained: 0
   attackPoint: {fileID: 8317459078299350557}
-  attackRange: 0.15
+  attackRange: 0.17
   attackRate: 3
   enemyLayers:
     serializedVersion: 2
@@ -240,6 +241,26 @@ MonoBehaviour:
   MaxShoot: 5
   CurrentShot: 0
   attackDamage: 40
+--- !u!114 &-6969379321242276481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8317459077447522911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23045169ed899964880b843d9f1395f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 150
+  currentHealth: 150
+  Player_Dead: 0
+  healthBar: {fileID: 0}
+  Character_Ani: {fileID: 0}
+  healthPickUp: 20
+  heart: {fileID: 0}
+  canTakeDamage: 0
 --- !u!1 &8317459077710645934
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8317459078299350546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.144, y: -0.01, z: 0}
+  m_LocalPosition: {x: 0.205, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8317459077447522906}
