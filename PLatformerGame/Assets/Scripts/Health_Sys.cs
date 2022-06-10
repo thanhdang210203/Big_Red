@@ -41,23 +41,26 @@ public class Health_Sys : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (canTakeDamage)
+        if(canTakeDamage == true)
         {
             currentHealth -= damage;
             Character_Ani.SetTrigger("isHurt");
             healthBar.SetHealth(currentHealth);
         }
-        
+        else if(canTakeDamage == false)
+        {
+            
+        }    
+      
     }
 
     public void Invicibility(bool noDmg)
     {
-        if (noDmg == true)
-        {
+      
             canTakeDamage = false;
             StartCoroutine(Wait());
             canTakeDamage = true;
-        }
+        
         
     }
 
